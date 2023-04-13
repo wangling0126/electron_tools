@@ -124,7 +124,7 @@ autoUpdater.setFeedURL({
   provider: "github",
   owner: "wangling0126",
   repo: "electron_tools",
-  releaseType: "release",
+  releaseType: "draft",
 });
 
 // 监听更新事件
