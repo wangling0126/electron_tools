@@ -1,6 +1,6 @@
 {
   "name": "electron-vite-project",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist-electron/main/index.js",
   "description": "Really simple Electron + Vue + Vite boilerplate.",
   "author": "wangling <wangling_0126@163.com>",
