@@ -21,7 +21,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && electron-builder",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "release": "electron-builder"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
@@ -38,6 +39,10 @@
     "electron-updater": "^5.3.0"
   },
   "build": {
+    "snap": {
+      "publish": false,
+      "confinement": "strict"
+    },
     "publish": [
       {
         "provider": "github",
