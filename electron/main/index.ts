@@ -76,7 +76,10 @@ async function createWindow() {
   // win.webContents.on('will-navigate', (event, url) => { }) #344
 }
 
-app.whenReady().then(createWindow);
+app.whenReady().then(() => {
+  createWindow();
+  autoUpdater.checkForUpdates();
+});
 
 app.on("window-all-closed", () => {
   win = null;
@@ -139,9 +142,4 @@ autoUpdater.on("update-downloaded", () => {
   // 处理下载完成事件，例如通知用户更新已成功下载
   // 退出并安装更新
   autoUpdater.quitAndInstall();
-});
-
-// 在应用程序启动时检查更新
-app.on("ready", () => {
-  autoUpdater.checkForUpdates();
 });
